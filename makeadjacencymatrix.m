@@ -4,19 +4,85 @@ files=repmat(string(), [1 11]);
 % file size contains the length of each library in the order that it is
 % read in files, this is used to assigning theright library to each gene
 % set
-filesize=[84;96;2192;2192;2918;2918;967;93;207;30;315]; 
+%  %diseases
+% filesize=[2139;90;187;85;858;189;323;323;216;216;345;6100;6100;96;96];%;7876];
+% 
+% 
+% files(1,14)='LINCS_L1000_Ligand_Perturbations_up.txt'
+% files(1,15)='LINCS_L1000_Ligand_Perturbations_down.txt'
+% % files(1,16)='DrugMatrix.txt'
+% files(1,12)='Old_CMAP_up.txt'
+% files(1,13)='Old_CMAP_down.txt'
+% files(1,1)='GeneSigDB.txt'
+% files(1,2)='OMIM_Disease.txt'
+% files(1,3)='OMIM_Expanded.txt'
+% files(1,4)='VirusMINT.txt'
+% files(1,5)='MSigDB_Computational.txt'
+% files(1,6)='MSigDB_Oncogenic_Signatures.txt'
+% files(1,7)='Virus_Perturbations_from_GEO_up.txt'
+% files(1,8)='Virus_Perturbations_from_GEO_down.txt'
+% files(1,9)='Achilles_Fitness_increase.txt'
+% files(1,10)='Achilles_fitness_decrease.txt'
+% files(1,11)='dbGaP.txt'
+            
+ %ontologies  filesize=[5192;641;1136;5231;1779;1842;2283;1811]; 
 
-files(1,1)='Human_Gene_Atlas.txt'
-files(1,2)='Mouse_Gene_Atlas.txt'
-files(1,3)='Allen_Brain_Atlas_up.txt'
-files(1,4)='Allen_Brain_Atlas_down.txt'
-files(1,5)='GTEx_Tissue_Sample_Gene_Expression_Profiles_up.txt'
-files(1,6)='GTEx_Tissue_Sample_Gene_Expression_Profiles_down.txt'
-files(1,7)='Cancer_Cell_Line_Encyclopedia.txt'
-files(1,8)='NCI-60_Cancer_Cell_Lines.txt'
-files(1,9)='Tissue_Protein_Expression_from_ProteomicsDB.txt'
-files(1,10)='Tissue_Protein_Expression_from_Human_Proteome_Map.txt'
-files(1,11)='ESCAPE.txt' 
+%             files(1,1)='GO_Biological_Process_2015.txt';
+%             files(1,2)='GO_Cellular_Component_2015.txt';
+%             files(1,3)='GO_Molecular_Function_2015.txt';
+%             files(1,4)='MGI_Mammalian_Phenotype_2017.txt';
+%             files(1,5)='Human_Phenotype_Ontology.txt';
+%             files(1,6)='Jensen_TISSUES.txt';
+%             files(1,7)='Jensen_COMPARTMENTS.txt';
+%             files(1,8)='Jensen_DISEASES.txt';      
+ %%TF 
+%  filesize=[290;326;645;104;412;816;383;615;222;269];          
+%             files(1,3)='ChEA_2016.txt'; 
+%             files(1,4)='ENCODE_and_ChEA_Consensus_TFs_from_ChIP-X.txt'; 
+%             files(1,5)='ENCODE_Histone_Modifications_2015.txt';
+%             files(1,6)='ENCODE_TF_ChIP-seq_2015.txt';
+%             files(1,7)='Epigenomics_Roadmap_HM_ChIP-seq.txt';
+%             files(1,8)='Genome_Browser_PWMs.txt';
+%             files(1,9)='TargetScan_microRNA.txt';
+%             files(1,10)='TF-LOF_Expression_from_GEO.txt';
+%             files(1,1)='Transcription_Factor_PPIs.txt';
+%             files(1,2)='TRANSFAC_and_JASPAR_PWMs.txt';     
+%%Path 
+% filesize=[1530;237;152;209;112;3915;995;385;428;3644;3644;285;285;1796;1658;84;59;437;293];
+% files(1,19)='KEGG_2016.txt'
+% files(1,18)='WikiPathways_2016.txt'
+% files(1,1)='Reactome_2016.txt'
+%  files(1,2)='BioCarta_2016.txt'
+% files(1,3)='Humancyc_2016.txt'
+% files(1,4)='NCI-Nature_2016.txt'
+% files(1,5)='Panther_2016.txt'
+% files(1,6)='BioPlex_2017.txt'
+% files(1,7)='huMAP.txt'
+% files(1,8)='PPI_Hub_Proteins.txt'
+% files(1,9)='KEA_2015.txt'
+% files(1,10)='LINCS_L1000_Kinase_Perturbations_down.txt'
+% files(1,11)='LINCS_L1000_Kinase_Perturbations_up.txt'
+% files(1,12)='Kinase_Perturbations_from_GEO_down.txt'
+% files(1,13)='Kinase_Perturbations_from_GEO_up.txt'
+% files(1,14)='NURSA_Human_Endogenous_Complexome.txt'
+% files(1,15)='CORUM.txt'
+% files(1,16)='SILAC_Phosphoproteomics.txt'
+% files(1,17)='Phosphatase_Substrates_from_DEPOD.txt'
+
+% % %celltypes
+% filesize=[84;96;2192;2192;2918;2918;967;93;207;30;315]; 
+% 
+% files(1,1)='Human_Gene_Atlas.txt'
+% files(1,2)='Mouse_Gene_Atlas.txt'
+% files(1,3)='Allen_Brain_Atlas_up.txt'
+% files(1,4)='Allen_Brain_Atlas_down.txt'
+% files(1,5)='GTEx_Tissue_Sample_Gene_Expression_Profiles_up.txt'
+% files(1,6)='GTEx_Tissue_Sample_Gene_Expression_Profiles_down.txt'
+% files(1,7)='Cancer_Cell_Line_Encyclopedia.txt'
+% files(1,8)='NCI-60_Cancer_Cell_Lines.txt'
+% files(1,9)='Tissue_Protein_Expression_from_ProteomicsDB.txt'
+% files(1,10)='Tissue_Protein_Expression_from_Human_Proteome_Map.txt'
+% files(1,11)='ESCAPE.txt'
 %             
             fout=fopen('alltext.txt','w');
            for i=1:length(files)
